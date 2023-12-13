@@ -1,5 +1,5 @@
 bot:
-  inspection: grayskull-update
+  inspection: update-grayskull
 conda_build:
   error_overlinking: true
 conda_forge_output_validation: true
