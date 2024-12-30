@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.dev0
-    - flit-core >=3.2,<4
+    - python {{ python_min }}
+    - flit-core ==3.10.0
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }},<4.dev0
     - apache-airflow-providers-cncf-kubernetes >=5.1.0
     - apache-airflow >=2.9.0
     - cryptography >=41.0.0
@@ -31,6 +31,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
