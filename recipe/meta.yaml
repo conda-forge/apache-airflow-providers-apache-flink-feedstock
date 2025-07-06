@@ -1,5 +1,6 @@
 {% set name = "apache-airflow-providers-apache-flink" %}
 {% set version = "1.7.1" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
