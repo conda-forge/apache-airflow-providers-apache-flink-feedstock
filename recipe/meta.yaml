@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-flink" %}
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_flink-{{ version }}.tar.gz
-  sha256: dd9b1ea67702069a780b14ae98797f411cd3e52bc83383e23b1a4a02fcc9ba2e
+  sha256: d16317379493846a606ddacc97a7e25d713e3ba6ee1426cb527fd581abc28197
 
 build:
   noarch: python
