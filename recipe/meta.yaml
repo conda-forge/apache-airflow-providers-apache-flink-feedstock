@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-flink" %}
-{% set version = "1.7.3" %}
+{% set version = "1.7.4" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_flink-{{ version }}.tar.gz
-  sha256: 3a8a94bcb06fa30ef58b13036c69d680dd6455dc8b7457eed1504630c3264211
+  sha256: 41a003283cb2bb3055b654e655428188d52f93bba9a70b02423ba9c08ba1032c
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
-    - cryptography >=41.0.0
+    - cryptography >=41.0.0,<46.0.0
     - apache-airflow-providers-cncf-kubernetes >=5.1.0
 
 test:
