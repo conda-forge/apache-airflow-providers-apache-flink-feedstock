@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-apache-flink" %}
-{% set version = "1.7.3" %}
-{% set python_min = "3.10" %}
+{% set version = "1.7.4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_flink-{{ version }}.tar.gz
-  sha256: 3a8a94bcb06fa30ef58b13036c69d680dd6455dc8b7457eed1504630c3264211
+  sha256: 41a003283cb2bb3055b654e655428188d52f93bba9a70b02423ba9c08ba1032c
 
 build:
   noarch: python
@@ -23,7 +22,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
-    - cryptography >=41.0.0
+    - cryptography >=41.0.0,<46.0.0
     - apache-airflow-providers-cncf-kubernetes >=5.1.0
 
 test:
@@ -39,7 +38,9 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-apache-flink for Apache Airflow
   license: Apache-2.0
-  license_file: src/airflow/providers/apache/flink/LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-apache-flink/stable/index.html
   dev_url: https://github.com/apache/airflow/
