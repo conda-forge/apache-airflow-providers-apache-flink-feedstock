@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-apache-flink
-  version: "1.8.1"
+  version: "1.8.2"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_apache_flink-${{ version }}.tar.gz
-  sha256: a6a27f7789ee7f836dc1ea54d3680b2611d245b5ae2c0fc85c9d5a5146f553e3
+  sha256: f35067a191a12aa87386ba2924f750d2b25512a525fef1d1d46acec57460521f
 
 build:
   noarch: python
@@ -30,7 +30,7 @@ requirements:
 tests:
   - python:
       imports:
-      - airflow.providers.apache.flink
+        - airflow.providers.apache.flink
       pip_check: true
       python_version: ${{ python_min }}.*
 
