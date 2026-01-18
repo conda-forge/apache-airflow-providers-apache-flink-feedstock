@@ -30,7 +30,7 @@ requirements:
 tests:
   - python:
       imports:
-        - airflow.providers.apache.flink
+      - airflow.providers.apache.flink
       pip_check: true
       python_version: ${{ python_min }}.*
 
